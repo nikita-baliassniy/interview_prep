@@ -21,17 +21,9 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-//    public Student saveOrUpdate(Student s) {
-//        return studentRepository.saveOrUpdate(s);
-//    }
-
     public Student save(Student s) {
         return studentRepository.save(s);
     }
-
-//    public Student update(Student s) {
-//        return studentRepository.
-//    }
 
     public void deleteBydId(Long id) {
         studentRepository.deleteById(id);
