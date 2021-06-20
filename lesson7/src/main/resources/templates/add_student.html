@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>New Student</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h2 class="display-4">Добавление студента</h2> <br>
+
+<form th:action="@{/students/add}" method="POST">
+    <input type="text" name="name" placeholder="Введите ФИО студента"/> <br><br>
+    <input type="number" step="1" min="1" name="age" placeholder="Введите возраст студента"/> <br>
+    <button class="btn btn-light" type="submit">Подтвердить</button>
+</form>
+<button class="btn btn-light"><a style="text-decoration: none; color: black;"
+                                 th:href="@{/students}">Вернуться на главную</a></button>
+</body>
+</html>
